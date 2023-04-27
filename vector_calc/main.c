@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
+#include <unistd.h>
 
 int main()
 {
@@ -12,21 +13,21 @@ int main()
    int selection;
    printf("which one?");
    scanf("%d",&selection);
-   if(selection=1){
+   if(selection==1){
     printf("input the vector quantities with a comma in between:\n\t");
     float vec1;
     float vec2;
     scanf("%f,%f",&vec1,&vec2);
     sleep(1);
-    printf("specify the angle in between along the base degree:");
-    float angle;
-    scanf("%f",&angle);
+    printf("Enter the angle between the vectors (in degrees): ");
+    float angle_degrees;
+    scanf("%f", &angle_degrees);
 
-    system("cls");
+    float angle_radians = angle_degrees * M_PI / 180;
+
     float resultant;
-    resultant = sqrt((vec1*vec1)+(vec2*vec2)+2*((vec1*vec2)*cos(angle)));
+    resultant = sqrt((vec1*vec1)+(vec2*vec2)+2*((vec1*vec2)*cos(angle_radians)));
     printf("your resultant is :%f\n\n",resultant);
-
 
    }
     return 0;
