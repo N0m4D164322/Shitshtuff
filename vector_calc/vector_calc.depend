@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1682600012 source:c:\users\jc\desktop\codes\vector_calc\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<time.h>
+
